@@ -8,10 +8,20 @@
 <?php } ?>
 
 <table class="table table-striped table-bordered">
-	<?php $items = listItems($conexao);
+	<thead>
+    <tr>
+    	<th scope="col">Horário da medição</th>
+      	<th scope="col">Pressão sistólica (mmHg)</th>
+      	<th scope="col">Pressão diastólica (mmHg)</th>
+      	<th scope="col">Pulso (bpm)</th>
+      	<th scope="col"></th>
+    </tr>
+  </thead>
+	<?php $items = medicoes2_listItems($conexao);
 	foreach($items as $item):
 	?>
 	<tr>
+		<td><?= $item['ts'] ?></td>
 		<td><?= $item['sist'] ?></td>
 		<td><?= $item['diast'] ?></td>
 		<td><?= $item['pulse'] ?></td>

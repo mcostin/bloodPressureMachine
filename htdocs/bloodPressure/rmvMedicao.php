@@ -4,7 +4,7 @@
 	include("bloodPressureDB.php"); 
 
 	$id = $_POST['id'];
-	removeItem($conexao, $id);
+	medicoes2_removeItem($conexao, $id);
 	header("Location: pressureList.php?rmv=true");
 	die();
 ?>

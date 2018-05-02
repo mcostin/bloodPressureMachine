@@ -7,7 +7,7 @@
  	$diast = $_GET["diast"];
  	$pulse = $_GET["pulse"];
 
- 	if(insertItem($conexao, $sist, $diast, $pulse)) { ?>
+ 	if(medicoes2_insertItem($conexao, $sist, $diast, $pulse)) { ?>
 	<p class="text-success">Medição ( <?= $sist; ?>, <?= $diast; ?>, <?= $pulse; ?> ) adicionada com sucesso!</p>
 	<?php } else { 
 	$msg = msqli_error($conexao);
